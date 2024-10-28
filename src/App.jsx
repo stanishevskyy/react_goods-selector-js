@@ -47,11 +47,15 @@ export const App = () => {
               className={classNames({
                 'has-background-success-light': el === selectedGood,
               })}
-              onClick={() => setSelectedGood(el)}
             >
               <td>
                 {el !== selectedGood ? (
-                  <button data-cy="AddButton" type="button" className="button">
+                  <button
+                    data-cy="AddButton"
+                    type="button"
+                    className="button"
+                    onClick={() => setSelectedGood(el)}
+                  >
                     +
                   </button>
                 ) : (
